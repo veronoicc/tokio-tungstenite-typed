@@ -2,8 +2,11 @@
 //!
 //! The following features are available:
 //!
-//! - `json`: Enables [`JsonCodec`] which encodes message as JSON using
+//! - `json`: Enables [`TextJsonCodec`] and [`BinaryJsonCodec`] which encodes message as JSON using
 //! `serde_json`. Enabled by default.
+//! - `msgpack`: Enables [`MsgPackCodec`] which encodes message as MessagePack using
+//! `rmp-serde`.
+//! - `native-tls`, `rustls-tls-native-roots`, `rustls-tls-webpki-roots`: Enables the specified tls backend in tungstenite
 
 #![warn(
     clippy::all,
